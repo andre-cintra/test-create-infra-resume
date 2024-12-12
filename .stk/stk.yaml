@@ -1,0 +1,35 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: test-create-infra-resume
+  description: "Descreva sua Infraestrutura explicando o propósito."
+  stack: ''
+spec:
+  type: infra
+  plugins:
+    - name: cli-workflow-studio/wf-infra-plugin-01@0.0.1
+      alias: wf-infra-plugin-01-01jey4wrp2ecfz31ghcczt80rw
+      plugin-version-id: 01JERACYE2GZ9EMZ8AJG8R2KQD
+      type: infra
+      inputs:
+        region: "us-east-1"
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: cli-workflow-studio/wf-infra-plugin-02@0.0.1
+      alias: wf-infra-plugin-02-01jey4wsfjed7jx1g2d60p10e5
+      plugin-version-id: 01JERAEBP947T4KPJP42BFYRZG
+      type: infra
+      inputs:
+        topic_name: "my_topic"
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs: {}
