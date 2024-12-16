@@ -1,0 +1,39 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: wf-ws-infra-01
+  description: Another Description
+  stack-version-id: 01JF7SN8B1MV4HDCRJYJSRK2AS
+  stack: stack-for-workflows@0.1.0
+spec:
+  type: infra
+  infra-id: 01JERCVCTVV0BKGBFANP4E5XWV
+  plugins:
+    - name: cli-workflow-studio/stack-for-workflows@0.1.0/wf-infra-plugin-01@0.0.1
+      alias: wf-infra-plugin-01-01jf8kbxxcsmap07tc91bfn4x9
+      plugin-version-id: 01JERACYE2GZ9EMZ8AJG8R2KQD
+      stack-version-id: 01JF7SN8B1MV4HDCRJYJSRK2AS
+      type: infra
+      inputs:
+        region: "us-east-1"
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: cli-workflow-studio/stack-for-workflows@0.1.0/wf-infra-plugin-02@0.0.1
+      alias: wf-infra-plugin-02-01jf8kc09t23r9h7bk8kkbn4y9
+      plugin-version-id: 01JERAEBP947T4KPJP42BFYRZG
+      stack-version-id: 01JF7SN8B1MV4HDCRJYJSRK2AS
+      type: infra
+      inputs:
+        topic_name: "my_topic"
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs: {}
