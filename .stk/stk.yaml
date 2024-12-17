@@ -1,0 +1,38 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: test-app-01
+  description: "Descreva o app explicando o propósito."
+  stack: ''
+spec:
+  type: app
+  plugins:
+    - name: cli-workflow-studio/app-plugin-01@0.0.1
+      alias: app-plugin-01-01jfae8vta0nne6pm68jb9r10q
+      plugin-version-id: 01JFA8WA2YZ5S503Z1DRCB5E53
+      type: app
+      inputs:
+        resource: Client
+        method: GET
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: cli-workflow-studio/app-plugin-02@0.0.2
+      alias: app-plugin-02-01jfae8wh458t77qk1sapa0688
+      plugin-version-id: 01JFA8X3SF3HNTFF2XCC58TK5D
+      type: app
+      inputs:
+        lst_of_obj:
+          - txt_one: aa
+            int_one: 1
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs: {}
