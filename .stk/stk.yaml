@@ -1,0 +1,42 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: app-with-wf-two
+  description: Another Description
+  stack-version-id: 01JFAEAWFRQKA6AQ8ACR5ZXJHQ
+  stack: stack-for-workflows@1.0.1
+spec:
+  type: app
+  app-id: 01JFADGD61J1TBHAB1BMATEF7D
+  plugins:
+    - name: cli-workflow-studio/stack-for-workflows@1.0.1/app-plugin-01@0.0.1
+      alias: app-plugin-01-01jfahwtpsjrwagew39g77ktz9
+      plugin-version-id: 01JFA8WA2YZ5S503Z1DRCB5E53
+      stack-version-id: 01JFAEAWFRQKA6AQ8ACR5ZXJHQ
+      type: app
+      inputs:
+        resource: users
+        method: POST
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: cli-workflow-studio/stack-for-workflows@1.0.1/app-plugin-02@0.0.2
+      alias: app-plugin-02-01jfahwwy3c5th3rk0xyd6v8as
+      plugin-version-id: 01JFA8X3SF3HNTFF2XCC58TK5D
+      stack-version-id: 01JFAEAWFRQKA6AQ8ACR5ZXJHQ
+      type: app
+      inputs:
+        lst_of_obj:
+          - txt_one: text_A
+            int_one: 15
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs: {}
