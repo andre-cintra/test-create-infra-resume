@@ -1,0 +1,41 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: app-from-workflow-in-workspace
+  description: "Descreva o app explicando o propósito."
+  stack-version-id: 01JFD1QZ7N6FS7X4QWQDVGS3MV
+  stack: cli-workflow-stack@0.0.1
+spec:
+  type: app
+  plugins:
+    - name: cli-workflow-studio/cli-workflow-stack@0.0.1/app-plugin-01@0.0.1
+      alias: app-plugin-01-01jfd358jznw36m79pwaw4qekc
+      plugin-version-id: 01JFD1B8FVXH1SAY7K4TWR0B4R
+      stack-version-id: 01JFD1QZ7N6FS7X4QWQDVGS3MV
+      type: app
+      inputs:
+        resource: aaaa
+        method: POST
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: cli-workflow-studio/cli-workflow-stack@0.0.1/app-plugin-02@0.0.1
+      alias: app-plugin-02-01jfd35a612mmfyct2ppte3pde
+      plugin-version-id: 01JFD1CJQ9SXYC6KX1GZT36MX6
+      stack-version-id: 01JFD1QZ7N6FS7X4QWQDVGS3MV
+      type: app
+      inputs:
+        lst_of_obj:
+          - txt_one: aaa
+            int_one: 111
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs: {}
