@@ -1,0 +1,41 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: workflow-teste-andre
+  description: "Descreva o app explicando o propósito."
+  stack-version-id: 01JFDCE7PYA1SH9QVB2BS81DKG
+  stack: cli-workflow-stack@0.0.2
+spec:
+  type: app
+  plugins:
+    - name: cli-workflow-studio/cli-workflow-stack@0.0.2/app-plugin-01@0.0.1
+      alias: app-plugin-01-01jfdnv7pp9q3xgtpfde5brb6v
+      plugin-version-id: 01JFD1B8FVXH1SAY7K4TWR0B4R
+      stack-version-id: 01JFDCE7PYA1SH9QVB2BS81DKG
+      type: app
+      inputs:
+        resource: Client
+        method: GET
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: cli-workflow-studio/cli-workflow-stack@0.0.2/app-plugin-02@0.0.1
+      alias: app-plugin-02-01jfdnv9h05kpxbbm9hphwwtwx
+      plugin-version-id: 01JFD1CJQ9SXYC6KX1GZT36MX6
+      stack-version-id: 01JFDCE7PYA1SH9QVB2BS81DKG
+      type: app
+      inputs:
+        lst_of_obj:
+          - txt_one: aaaaa
+            int_one: 1223
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs: {}
