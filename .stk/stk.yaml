@@ -1,0 +1,38 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: infra-from-workflow-in-workspace
+  description: "Descreva sua Infraestrutura explicando o propósito."
+  stack-version-id: 01JFD1QZ7N6FS7X4QWQDVGS3MV
+  stack: cli-workflow-stack@0.0.1
+spec:
+  type: infra
+  plugins:
+    - name: cli-workflow-studio/cli-workflow-stack@0.0.1/wf-infra-plugin-01@0.0.1
+      alias: wf-infra-plugin-01-01jfd3hjet7mwhv5gpdcvngph4
+      plugin-version-id: 01JFD1DMPD0JH4F51MAS309PK9
+      stack-version-id: 01JFD1QZ7N6FS7X4QWQDVGS3MV
+      type: infra
+      inputs:
+        region: "us-east-1"
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: cli-workflow-studio/cli-workflow-stack@0.0.1/wf-infra-plugin-02@0.0.1
+      alias: wf-infra-plugin-02-01jfd3hm93v306g0wp3d5x3jzq
+      plugin-version-id: 01JFD1GGTR67E0Q3WGSCFD2K96
+      stack-version-id: 01JFD1QZ7N6FS7X4QWQDVGS3MV
+      type: infra
+      inputs:
+        topic_name: "my_topic"
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs: {}
