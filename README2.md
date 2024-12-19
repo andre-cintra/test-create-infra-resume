@@ -1,0 +1,1 @@
+[{'txt_one': 'text_A', 'int_one': 15}]
